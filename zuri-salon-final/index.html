@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zuri Hair Studio | Braids, Styling and Nails</title>
+  <meta name="description" content="Zuri Hair Studio - braids, weaves, styling and nails. Book on WhatsApp.">
+  <!-- Google Fonts: needs internet. If it fails, the fallback fonts are used. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. HEADER -->
+  <header class="site-header">
+    <a href="#home" class="logo">Zuri Hair Studio</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
+    <nav id="nav" class="nav">
+      <a href="#services">Services</a>
+      <a href="#gallery">Our work</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#book">Book</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2. HERO: put a photo at images/hero.jpg to show it as the background -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <h1>Hair that lasts the whole month.</h1>
+        <p>Braids, weaves, styling and nails. Open Monday to Saturday, 8am to 7pm.</p>
+        <a class="btn" href="#book">Book your visit</a>
+        <a class="btn ghost" href="#services">See prices</a>
+      </div>
+    </section>
+
+    <!-- 3. SERVICES: each card has a photo, a name and a price -->
+    <section class="section" id="services">
+      <h2>Services and prices</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="images/box-braids.jpg" alt="Box braids" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+          <div class="card-body"><h3>Box braids</h3><span class="price">KES 2,500</span></div>
+        </article>
+        <article class="card">
+          <img src="images/cornrows.jpg" alt="Cornrows" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+          <div class="card-body"><h3>Cornrows</h3><span class="price">KES 1,000</span></div>
+        </article>
+        <article class="card">
+          <img src="images/twists.jpg" alt="Twists" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+          <div class="card-body"><h3>Twists</h3><span class="price">KES 2,000</span></div>
+        </article>
+        <article class="card">
+          <img src="images/colour-braids.jpg" alt="Colour braids" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+          <div class="card-body"><h3>Colour braids</h3><span class="price">KES 3,500</span></div>
+        </article>
+        <article class="card">
+          <img src="images/beaded.jpg" alt="Beaded cornrows" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+          <div class="card-body"><h3>Beaded cornrows</h3><span class="price">KES 1,800</span></div>
+        </article>
+        <article class="card">
+          <img src="images/ombre.jpg" alt="Blonde ombre braids" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+          <div class="card-body"><h3>Blonde ombre braids</h3><span class="price">KES 3,500</span></div>
+        </article>
+      </div>
+      <h3 class="more-title">More services</h3>
+      <ul class="price-list">
+        <li><span>Weave installation</span><span>KES 1,500</span></li>
+        <li><span>Wash and blow-dry</span><span>KES 600</span></li>
+        <li><span>Manicure</span><span>KES 500</span></li>
+        <li><span>Pedicure</span><span>KES 700</span></li>
+      </ul>
+    </section>
+
+    <!-- 4. GALLERY: three more photos of finished work -->
+    <section class="section alt" id="gallery">
+      <h2>Our work</h2>
+      <div class="gallery">
+        <img src="images/g1.jpg" alt="Braided hairstyle 1" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+        <img src="images/g2.jpg" alt="Braided hairstyle 2" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+        <img src="images/g3.jpg" alt="Braided hairstyle 3" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+        <img src="images/g4.jpg" alt="Braided hairstyle 4" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+        <img src="images/g5.jpg" alt="Braided hairstyle 5" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+        <img src="images/g6.jpg" alt="Braided hairstyle 6" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
+      </div>
+    </section>
+
+    <!-- 5. REVIEWS: replace with real customer words (ask permission first) -->
+    <section class="section" id="reviews">
+      <h2>What customers say</h2>
+      <blockquote>My braids stayed neat for six weeks. The price was exactly what they told me.<cite>Amina, customer</cite></blockquote>
+      <blockquote>They start on time and the salon is very clean.<cite>Grace, customer</cite></blockquote>
+    </section>
+
+    <!-- 6. BOOKING FORM -->
+    <section class="section alt" id="book">
+      <h2>Book on WhatsApp</h2>
+      <form id="bookForm">
+        <label for="name">Your name</label>
+        <input type="text" id="name" required>
+
+        <label for="service">Service</label>
+        <select id="service" required>
+          <option value="">Choose a service</option>
+          <option>Box braids</option>
+          <option>Cornrows</option>
+          <option>Twists</option>
+          <option>Colour braids</option>
+          <option>Beaded cornrows</option>
+          <option>Blonde ombre braids</option>
+          <option>Weave installation</option>
+          <option>Wash and blow-dry</option>
+          <option>Manicure</option>
+          <option>Pedicure</option>
+        </select>
+
+        <label for="date">Preferred day</label>
+        <input type="date" id="date" required>
+
+        <button type="submit" class="btn">Send on WhatsApp</button>
+        <p id="formMsg" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="site-footer">
+    <p>Zuri Hair Studio, Main Street, Your Town</p>
+    <p>Phone: 0789 509 623</p>
+    <p class="credit">Photos from Pexels and Unsplash photographers</p>
+  </footer>
+
+  <!-- 8. Floating WhatsApp button (change the number in script.js) -->
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener">WhatsApp us</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
