@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zuri Hair Studio | Braids, Styling and Nails</title>
-  <meta name="description" content="Zuri Hair Studio - braids, weaves, styling and nails. Book on WhatsApp.">
-  <!-- Google Fonts: needs internet. If it fails, the fallback fonts are used. -->
+  <title>Zuri Hair Studio | Braids, Styling and Nails in Nakuru Town</title>
+  <meta name="description" content="Zuri Hair Studio, Main Street, Nakuru Town. Braids, twists, cornrows, weaves and nails. Book on WhatsApp.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -13,68 +14,80 @@
 </head>
 <body>
 
-  <!-- 1. HEADER -->
+  <!-- 1. HEADER with logo -->
   <header class="site-header">
-    <a href="#home" class="logo">Zuri Hair Studio</a>
+    <a href="#home" class="logo-link" aria-label="Zuri Hair Studio home"><img src="images/logo.jpg" alt="Zuri Hair Studio logo" class="logo" width="64" height="64"></a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
     <nav id="nav" class="nav">
       <a href="#services">Services</a>
       <a href="#gallery">Our work</a>
       <a href="#reviews">Reviews</a>
       <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <!-- 2. HERO: put a photo at images/hero.jpg to show it as the background -->
+    <!-- 2. HERO: the full photo shows on phones, text sits on top on laptops -->
     <section class="hero" id="home">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/hero-mobile.jpg">
+        <img src="images/hero.jpg" alt="Beaded cornrows hairstyle" class="hero-img">
+      </picture>
       <div class="hero-text">
         <h1>Hair that lasts the whole month.</h1>
-        <p>Braids, weaves, styling and nails. Open Monday to Saturday, 8am to 7pm.</p>
+        <p>Braids, weaves, styling and nails in Nakuru Town. Open Monday to Saturday, 8am to 7pm.</p>
         <a class="btn" href="#book">Book your visit</a>
         <a class="btn ghost" href="#services">See prices</a>
+        <a class="btn ghost" href="#contact">Contact us</a>
       </div>
     </section>
 
-    <!-- 3. SERVICES: each card has a photo, a name and a price -->
+    <!-- 3. SERVICES: photo, price and a WhatsApp booking button on every one -->
     <section class="section" id="services">
       <h2>Services and prices</h2>
       <div class="cards">
         <article class="card">
           <img src="images/box-braids.jpg" alt="Box braids" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
           <div class="card-body"><h3>Box braids</h3><span class="price">KES 2,500</span></div>
+          <div class="card-actions"><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Box%20braids." target="_blank" rel="noopener">Book on WhatsApp</a></div>
         </article>
         <article class="card">
           <img src="images/cornrows.jpg" alt="Cornrows" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
           <div class="card-body"><h3>Cornrows</h3><span class="price">KES 1,000</span></div>
+          <div class="card-actions"><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Cornrows." target="_blank" rel="noopener">Book on WhatsApp</a></div>
         </article>
         <article class="card">
           <img src="images/twists.jpg" alt="Twists" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
           <div class="card-body"><h3>Twists</h3><span class="price">KES 2,000</span></div>
+          <div class="card-actions"><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Twists." target="_blank" rel="noopener">Book on WhatsApp</a></div>
         </article>
         <article class="card">
           <img src="images/colour-braids.jpg" alt="Colour braids" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
           <div class="card-body"><h3>Colour braids</h3><span class="price">KES 3,500</span></div>
+          <div class="card-actions"><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Colour%20braids." target="_blank" rel="noopener">Book on WhatsApp</a></div>
         </article>
         <article class="card">
           <img src="images/beaded.jpg" alt="Beaded cornrows" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
           <div class="card-body"><h3>Beaded cornrows</h3><span class="price">KES 1,800</span></div>
+          <div class="card-actions"><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Beaded%20cornrows." target="_blank" rel="noopener">Book on WhatsApp</a></div>
         </article>
         <article class="card">
           <img src="images/ombre.jpg" alt="Blonde ombre braids" loading="lazy" onerror="this.onerror=null;this.src='images/placeholder.svg'">
           <div class="card-body"><h3>Blonde ombre braids</h3><span class="price">KES 3,500</span></div>
+          <div class="card-actions"><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Blonde%20ombre%20braids." target="_blank" rel="noopener">Book on WhatsApp</a></div>
         </article>
       </div>
       <h3 class="more-title">More services</h3>
       <ul class="price-list">
-        <li><span>Weave installation</span><span>KES 1,500</span></li>
-        <li><span>Wash and blow-dry</span><span>KES 600</span></li>
-        <li><span>Manicure</span><span>KES 500</span></li>
-        <li><span>Pedicure</span><span>KES 700</span></li>
+        <li><span class="svc">Weave installation</span><span class="price">KES 1,500</span><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Weave%20installation." target="_blank" rel="noopener">Book on WhatsApp</a></li>
+        <li><span class="svc">Wash and blow-dry</span><span class="price">KES 600</span><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Wash%20and%20blow-dry." target="_blank" rel="noopener">Book on WhatsApp</a></li>
+        <li><span class="svc">Manicure</span><span class="price">KES 500</span><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Manicure." target="_blank" rel="noopener">Book on WhatsApp</a></li>
+        <li><span class="svc">Pedicure</span><span class="price">KES 700</span><a class="btn-wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20book%20Pedicure." target="_blank" rel="noopener">Book on WhatsApp</a></li>
       </ul>
     </section>
 
-    <!-- 4. GALLERY: three more photos of finished work -->
+    <!-- 4. GALLERY -->
     <section class="section alt" id="gallery">
       <h2>Our work</h2>
       <div class="gallery">
@@ -87,7 +100,7 @@
       </div>
     </section>
 
-    <!-- 5. REVIEWS: replace with real customer words (ask permission first) -->
+    <!-- 5. REVIEWS -->
     <section class="section" id="reviews">
       <h2>What customers say</h2>
       <blockquote>My braids stayed neat for six weeks. The price was exactly what they told me.<cite>Amina, customer</cite></blockquote>
@@ -100,7 +113,6 @@
       <form id="bookForm">
         <label for="name">Your name</label>
         <input type="text" id="name" required>
-
         <label for="service">Service</label>
         <select id="service" required>
           <option value="">Choose a service</option>
@@ -115,25 +127,39 @@
           <option>Manicure</option>
           <option>Pedicure</option>
         </select>
-
         <label for="date">Preferred day</label>
         <input type="date" id="date" required>
-
         <button type="submit" class="btn">Send on WhatsApp</button>
         <p id="formMsg" role="status"></p>
       </form>
     </section>
+
+    <!-- 7. CONTACT -->
+    <section class="section" id="contact">
+      <h2>Contact us</h2>
+      <p class="contact-line"><strong>Address:</strong> Main Street, Nakuru Town</p>
+      <p class="contact-line"><strong>Phone:</strong> 0789 509 623</p>
+      <p class="contact-line"><strong>Hours:</strong> Monday to Saturday, 8am to 7pm</p>
+      <p class="contact-actions">
+        <a class="btn" href="tel:+254789509623">Call us</a>
+        <a class="btn-wa" href="https://wa.me/254789509623" target="_blank" rel="noopener">WhatsApp us</a>
+      </p>
+    </section>
   </main>
 
-  <!-- 7. FOOTER -->
+  <!-- 8. FOOTER with logo -->
   <footer class="site-footer">
-    <p>Zuri Hair Studio, Main Street, Your Town</p>
+    <img src="images/logo.jpg" alt="Zuri Hair Studio logo" class="footer-logo" width="160" height="160" loading="lazy">
+    <p>Zuri Hair Studio, Main Street, Nakuru Town</p>
     <p>Phone: 0789 509 623</p>
     <p class="credit">Photos from Pexels and Unsplash photographers</p>
   </footer>
 
-  <!-- 8. Floating WhatsApp button (change the number in script.js) -->
-  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener">WhatsApp us</a>
+  <!-- 9. FLOATING BUTTONS -->
+  <div class="float-btns">
+    <a class="fab call" href="tel:+254789509623" aria-label="Call Zuri Hair Studio"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1l-2.2 2.2z"/></svg><span>Call us</span></a>
+    <a class="fab wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener" aria-label="WhatsApp Zuri Hair Studio">WhatsApp</a>
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -1,103 +1,99 @@
-/* 1. COLOURS AND FONTS */
+/* 1. COLOURS (change them here and the whole site changes) */
 :root {
-  --plum: #2e1a47;
+  --plum: #2e1a47;      /* dark purple: header, hero, footer */
   --pink: #d6336c;
   --gold: #e9b949;
-  --lilac: #f5effa;
+  --cream: #eee5d4;   /* page colour, matched to the logo background */
+  --sand: #ddd4c5;     /* alternate sections */
+  --ivory: #f7f3eb;   /* cards and form fields */
   --text: #231b2e;
 }
-
-/* 2. BASIC RESET */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: "Nunito Sans", Arial, sans-serif; color: var(--text); line-height: 1.6; }
-h1, h2, h3, .logo { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body { font-family: "Nunito Sans", Arial, sans-serif; color: var(--text); background: var(--cream); line-height: 1.6; }
+h1, h2, h3 { font-family: "DM Serif Display", Georgia, serif; font-weight: 400; }
 img { display: block; max-width: 100%; }
 
-/* 3. HEADER */
-.site-header {
-  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
-  padding: 1rem 1.25rem; background: var(--plum); position: sticky; top: 0; z-index: 10;
-}
-.logo { color: #fff; font-size: 1.4rem; text-decoration: none; }
-.menu-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: .4rem .9rem; border-radius: 6px; font-size: 1rem; }
-.nav { display: none; width: 100%; flex-direction: column; gap: .75rem; padding-top: 1rem; }
+/* 2. HEADER */
+.site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: .6rem 1.25rem; background: var(--plum); position: sticky; top: 0; z-index: 10; }
+.logo { width: 64px; height: 64px; border-radius: 12px; border: 2px solid var(--gold); }
+.menu-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: .5rem 1rem; border-radius: 6px; font-size: 1rem; }
+.nav { display: none; width: 100%; flex-direction: column; gap: .9rem; padding: 1rem 0 .5rem; }
 .nav.open { display: flex; }
-.nav a { color: #fff; text-decoration: none; }
+.nav a { color: var(--cream); text-decoration: none; font-weight: 700; }
 .nav a:hover, .nav a:focus { color: var(--gold); }
 
-/* 4. HERO: gradient on top of your photo (images/hero.jpg) */
-.hero {
-  min-height: 80vh; display: flex; align-items: center; color: #fff; padding: 3rem 1.25rem;
-  background:
-    linear-gradient(100deg, rgba(46,26,71,.95) 35%, rgba(46,26,71,.45)),
-    url("images/hero.jpg") center/cover no-repeat,
-    var(--plum);
-}
-.hero h1 { font-size: 2.6rem; line-height: 1.1; max-width: 13ch; }
-.hero p { margin: 1rem 0 1.5rem; max-width: 38ch; }
+/* 3. HERO (phone first: whole photo on top, text underneath) */
+.hero { background: var(--plum); color: var(--cream); }
+.hero-img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.hero-text { padding: 1.75rem 1.25rem 2.25rem; }
+.hero h1 { font-size: 2.3rem; line-height: 1.1; max-width: 14ch; }
+.hero p { margin: 1rem 0 1.5rem; max-width: 40ch; }
 
-/* 5. BUTTONS */
-.btn {
-  display: inline-block; background: var(--gold); color: var(--plum); padding: .8rem 1.4rem;
-  border: 2px solid var(--gold); border-radius: 8px; font-weight: 700; font-size: 1rem;
-  text-decoration: none; cursor: pointer; margin: 0 .5rem .5rem 0;
-}
-.btn:hover, .btn:focus { background: #fff; border-color: #fff; }
-.btn.ghost { background: transparent; color: #fff; border-color: #fff; }
-.btn.ghost:hover, .btn.ghost:focus { background: #fff; color: var(--plum); }
+/* 4. BUTTONS */
+.btn { display: inline-block; background: var(--gold); color: var(--plum); padding: .8rem 1.3rem; border: 2px solid var(--gold); border-radius: 8px; font-weight: 700; font-size: 1rem; text-decoration: none; cursor: pointer; margin: 0 .4rem .6rem 0; }
+.btn:hover, .btn:focus { background: var(--cream); border-color: var(--cream); }
+.btn.ghost { background: transparent; color: var(--cream); border-color: var(--cream); }
+.btn.ghost:hover, .btn.ghost:focus { background: var(--cream); color: var(--plum); }
+.btn-wa { display: inline-block; background: #25d366; color: #fff; padding: .6rem 1rem; border-radius: 8px; font-weight: 700; font-size: .95rem; text-decoration: none; }
+.btn-wa:hover, .btn-wa:focus { background: #1da851; }
 
-/* 6. SECTIONS */
-.section { padding: 3.5rem 1.25rem; max-width: 1000px; margin: 0 auto; }
+/* 5. SECTIONS */
+.section { padding: 3rem 1.25rem; max-width: 1000px; margin: 0 auto; }
 .section h2 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--plum); }
-.alt { max-width: none; background: var(--lilac); }
+.alt { max-width: none; background: var(--sand); }
 .alt > * { max-width: 1000px; margin-left: auto; margin-right: auto; }
 
-/* 7. SERVICE CARDS */
+/* 6. SERVICE CARDS */
 .cards { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-.card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 16px rgba(46,26,71,.12); }
+.card { background: var(--ivory); border-radius: 14px; overflow: hidden; box-shadow: 0 4px 16px rgba(46,26,71,.14); }
 .card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.card-body { display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+.card-body { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1rem .5rem; }
 .card-body h3 { font-size: 1.2rem; color: var(--plum); }
-.price { background: var(--pink); color: #fff; font-weight: 700; padding: .3rem .7rem; border-radius: 20px; font-size: .9rem; }
+.card-actions { padding: .25rem 1rem 1rem; }
+.card-actions .btn-wa { display: block; text-align: center; }
+.price { background: var(--pink); color: #fff; font-weight: 700; padding: .3rem .7rem; border-radius: 20px; font-size: .9rem; white-space: nowrap; }
+.more-title { font-size: 1.4rem; color: var(--plum); margin: 2.5rem 0 .5rem; }
+.price-list { list-style: none; }
+.price-list li { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; padding: .8rem 0; border-bottom: 1px solid rgba(46,26,71,.2); }
+.price-list .svc { flex: 1 1 8rem; font-weight: 700; }
 
-/* 8. GALLERY */
+/* 7. GALLERY, REVIEWS */
 .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
 .gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 10px; }
-
-/* 9. REVIEWS */
 blockquote { border-left: 4px solid var(--gold); padding: .5rem 1rem; margin-bottom: 1.25rem; font-size: 1.1rem; }
 cite { display: block; margin-top: .4rem; font-size: .9rem; color: var(--pink); font-style: normal; font-weight: 700; }
 
-/* 10. FORM */
+/* 8. FORM AND CONTACT */
 form { display: grid; gap: .5rem; max-width: 520px; }
 label { font-weight: 700; margin-top: .5rem; }
-input, select { padding: .7rem; font-size: 1rem; border: 1px solid #b9a6cc; border-radius: 6px; }
+input, select { padding: .75rem; font-size: 1rem; background: var(--ivory); border: 1px solid #b59f78; border-radius: 6px; }
 #formMsg { color: var(--pink); min-height: 1.5rem; }
+.contact-line { margin-bottom: .4rem; }
+.contact-actions { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+.contact-actions .btn { margin: 0; }
 
-/* 11. FOOTER AND FLOATING BUTTON */
-.site-footer { background: var(--plum); color: #fff; padding: 1.5rem 1.25rem 5rem; text-align: center; }
-.wa-float {
-  position: fixed; right: 1rem; bottom: 1rem; background: #25d366; color: #fff; font-weight: 700;
-  padding: .8rem 1.2rem; border-radius: 30px; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,.3);
-}
-
-/* 12. BIGGER SCREENS */
-@media (min-width: 768px) {
-  .menu-btn { display: none; }
-  .nav { display: flex; flex-direction: row; width: auto; padding-top: 0; gap: 1.5rem; }
-  .hero { padding: 4rem 3rem; }
-  .hero h1 { font-size: 4.2rem; }
-  .cards { grid-template-columns: repeat(3, 1fr); }
-  .gallery { grid-template-columns: repeat(3, 1fr); }
-}
-
-/* 13. EXTRA: more-services list and photo credit */
-.more-title { font-size: 1.4rem; color: var(--plum); margin: 2.5rem 0 .5rem; }
-.price-list { list-style: none; max-width: 520px; }
-.price-list li { display: flex; justify-content: space-between; padding: .8rem 0; border-bottom: 1px solid #d9cbe6; }
-.price-list li span:last-child { font-weight: 700; color: var(--pink); }
+/* 9. FOOTER */
+.site-footer { background: var(--plum); color: var(--cream); padding: 2rem 1.25rem 6rem; text-align: center; }
+.footer-logo { width: 160px; height: 160px; margin: 0 auto 1rem; border-radius: 16px; border: 2px solid var(--gold); }
 .credit { font-size: .8rem; opacity: .7; margin-top: .5rem; }
+
+/* 10. FLOATING CALL AND WHATSAPP BUTTONS */
+.float-btns { position: fixed; right: .9rem; bottom: .9rem; display: flex; flex-direction: column; gap: .6rem; z-index: 20; }
+.fab { display: flex; align-items: center; justify-content: center; gap: .5rem; padding: .75rem 1.1rem; border-radius: 30px; font-weight: 700; text-decoration: none; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,.35); }
+.fab.call { background: var(--plum); border: 2px solid var(--gold); color: var(--gold); }
+.fab.wa { background: #25d366; }
+
+/* 11. LAPTOP AND BIGGER (photo becomes the background, text on top) */
 @media (min-width: 768px) {
+  .site-header { padding: .6rem 3rem; }
+  .menu-btn { display: none; }
+  .nav { display: flex; flex-direction: row; width: auto; padding: 0; gap: 1.5rem; }
+  .hero { position: relative; min-height: 80vh; display: flex; align-items: center; overflow: hidden; }
+  .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-position: right center; }
+  .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(46,26,71,.95) 35%, rgba(46,26,71,.4)); }
+  .hero-text { position: relative; z-index: 1; padding: 4rem 3rem; max-width: 38rem; }
+  .hero h1 { font-size: 4rem; }
   .cards { grid-template-columns: repeat(3, 1fr); }
+  .gallery { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 }
