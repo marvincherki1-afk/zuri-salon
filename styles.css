@@ -3,9 +3,9 @@
   --plum: #2e1a47;      /* dark purple: header, hero, footer */
   --pink: #d6336c;
   --gold: #e9b949;
-  --cream: #eee5d4;   /* page colour, matched to the logo background */
-  --sand: #ddd4c5;     /* alternate sections */
-  --ivory: #f7f3eb;   /* cards and form fields */
+  --cream: #e7daf6;   /* page colour: soft lilac */
+  --sand: #f5d6e3;    /* alternate sections: soft blush */
+  --ivory: #f3eafb;   /* cards and form fields: pale lilac */
   --text: #231b2e;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,7 +16,9 @@ img { display: block; max-width: 100%; }
 
 /* 2. HEADER */
 .site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: .6rem 1.25rem; background: var(--plum); position: sticky; top: 0; z-index: 10; }
-.logo { width: 64px; height: 64px; border-radius: 12px; border: 2px solid var(--gold); }
+.brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
+.brand-name { font-family: "DM Serif Display", Georgia, serif; color: var(--gold); font-size: 1.25rem; line-height: 1.1; }
+.logo { width: 56px; height: 56px; border-radius: 12px; border: 2px solid var(--gold); }
 .menu-btn { background: none; border: 1px solid var(--gold); color: var(--gold); padding: .5rem 1rem; border-radius: 6px; font-size: 1rem; }
 .nav { display: none; width: 100%; flex-direction: column; gap: .9rem; padding: 1rem 0 .5rem; }
 .nav.open { display: flex; }
@@ -67,7 +69,7 @@ cite { display: block; margin-top: .4rem; font-size: .9rem; color: var(--pink); 
 /* 8. FORM AND CONTACT */
 form { display: grid; gap: .5rem; max-width: 520px; }
 label { font-weight: 700; margin-top: .5rem; }
-input, select { padding: .75rem; font-size: 1rem; background: var(--ivory); border: 1px solid #b59f78; border-radius: 6px; }
+input, select { padding: .75rem; font-size: 1rem; background: var(--ivory); border: 1px solid #b9a3d6; border-radius: 6px; }
 #formMsg { color: var(--pink); min-height: 1.5rem; }
 .contact-line { margin-bottom: .4rem; }
 .contact-actions { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
@@ -75,7 +77,9 @@ input, select { padding: .75rem; font-size: 1rem; background: var(--ivory); bord
 
 /* 9. FOOTER */
 .site-footer { background: var(--plum); color: var(--cream); padding: 2rem 1.25rem 6rem; text-align: center; }
-.footer-logo { width: 160px; height: 160px; margin: 0 auto 1rem; border-radius: 16px; border: 2px solid var(--gold); }
+.footer-brand { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 1.2rem; }
+.footer-brand .brand-name { font-size: 1.7rem; text-align: left; }
+.footer-logo { width: 96px; height: 96px; margin: 0; border-radius: 16px; border: 2px solid var(--gold); }
 .credit { font-size: .8rem; opacity: .7; margin-top: .5rem; }
 
 /* 10. FLOATING CALL AND WHATSAPP BUTTONS */
@@ -83,6 +87,7 @@ input, select { padding: .75rem; font-size: 1rem; background: var(--ivory); bord
 .fab { display: flex; align-items: center; justify-content: center; gap: .5rem; padding: .75rem 1.1rem; border-radius: 30px; font-weight: 700; text-decoration: none; color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,.35); }
 .fab.call { background: var(--plum); border: 2px solid var(--gold); color: var(--gold); }
 .fab.wa { background: #25d366; }
+.fab svg { flex: none; }
 
 /* 11. LAPTOP AND BIGGER (photo becomes the background, text on top) */
 @media (min-width: 768px) {

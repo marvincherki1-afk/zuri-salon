@@ -10,13 +10,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
   <!-- 1. HEADER with logo -->
   <header class="site-header">
-    <a href="#home" class="logo-link" aria-label="Zuri Hair Studio home"><img src="images/logo.jpg" alt="Zuri Hair Studio logo" class="logo" width="64" height="64"></a>
+    <a href="#home" class="brand" aria-label="Zuri Hair Studio home"><img src="images/logo.jpg" alt="Zuri Hair Studio logo" class="logo" width="56" height="56"><span class="brand-name">Zuri Hair Studio</span></a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu">Menu</button>
     <nav id="nav" class="nav">
       <a href="#services">Services</a>
@@ -149,18 +149,18 @@
 
   <!-- 8. FOOTER with logo -->
   <footer class="site-footer">
-    <img src="images/logo.jpg" alt="Zuri Hair Studio logo" class="footer-logo" width="160" height="160" loading="lazy">
+    <div class="footer-brand"><img src="images/logo.jpg" alt="Zuri Hair Studio logo" class="footer-logo" width="96" height="96" loading="lazy"><span class="brand-name">Zuri Hair Studio</span></div>
     <p>Zuri Hair Studio, Main Street, Nakuru Town</p>
     <p>Phone: 0789 509 623</p>
     <p class="credit">Photos from Pexels and Unsplash photographers</p>
   </footer>
 
   <!-- 9. FLOATING BUTTONS -->
-  <div class="float-btns">
+  <div class="float-btns" style="position:fixed;right:14px;bottom:14px;display:flex;flex-direction:column;gap:10px;z-index:9999">
     <a class="fab call" href="tel:+254789509623" aria-label="Call Zuri Hair Studio"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25c1.1.37 2.3.57 3.6.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1l-2.2 2.2z"/></svg><span>Call us</span></a>
-    <a class="fab wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener" aria-label="WhatsApp Zuri Hair Studio">WhatsApp</a>
+    <a class="fab wa" href="https://wa.me/254789509623?text=Hello%20Zuri%20Hair%20Studio%2C%20I%20would%20like%20to%20ask%20about%20your%20services." target="_blank" rel="noopener" aria-label="WhatsApp Zuri Hair Studio"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.2 13.9c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7a11 11 0 01-4.500-4c-.3-.5-1.100-1.600-1.100-2.900s.7-1.900.9-2.200a1 1 0 01.7-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.600-.3.300c-.1.100-.3.300-.1.600a7 7 0 002.700 2.400c.3.100.5.100.7-.1l.9-1.100c.2-.2.400-.2.600-.1l2 1c.3.100.5.200.5.300 0 .2 0 .8-.2 1.300z"/></svg><span>WhatsApp</span></a>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
